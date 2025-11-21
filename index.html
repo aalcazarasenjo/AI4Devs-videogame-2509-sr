@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Racing Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🏁 F1 RACING PROTO <span class="version">v0.1</span></h1>
+            <p class="instructions">Controles: ⬆️(W) Acelerar | ⬇️(S) Frenar | ⬅️➡ (A/D) Girar</p>
+        </header>
+
+        <div id="hud" class="hud-panel">
+            <div class="hud-item">
+                <span class="label">TIEMPO</span>
+                <span class="value" id="current-time">00:00.00</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">MEJOR VUELTA</span>
+                <span class="value highlight" id="best-time">--:--.--</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">VELOCIDAD</span>
+                <span class="value" id="speed">0</span> <span class="unit">km/h</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">VUELTA</span>
+                <span class="value" id="lap-count">1</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="debug-info">
+            <p>Estado: <span id="game-status">Esperando inicio...</span></p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
